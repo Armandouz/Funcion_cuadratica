@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Interactiva</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+    <header>
+        <h1 class="nombre-sitio">Física <span> Interactiva </span></h1>
+    </header>
+    
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="Teoria.html">Nosotros</a>
+            <a href="calculadora.html">Calculadora</a>
+            <a href="Noticias.html">Blog</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Calculadora Gráfica de Funciones Cuadráticas</h1>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="a">Coeficiente a</label>
+                <input type="number" id="a" step="any" placeholder="Ej: 2" required>
+            </div>
+            <div class="input-group">
+                <label for="b">Coeficiente b</label>
+                <input type="number" id="b" step="any" placeholder="Ej: -4">
+            </div>
+            <div class="input-group">
+                <label for="c">Coeficiente c</label>
+                <input type="number" id="c" step="any" placeholder="Ej: 1">
+            </div>
+        </div>
+
+        <button onclick="calculateAndGraph()">Calcular y Graficar</button>
+
+        <div id="graphContainer">
+            <canvas id="graph"></canvas>
+        </div>
+
+        <div class="results">
+            <h2>Resultados Analíticos</h2>
+            <div class="result-item" id="equation"></div>
+            <div class="result-item" id="vertex"></div>
+            <div class="result-item" id="axis"></div>
+            <div class="result-item" id="discriminant"></div>
+            <div class="result-item" id="roots"></div>
+            <div class="result-item" id="direction"></div>
+            
+            <div id="procedureContainer">
+                <h3>Procedimiento Detallado</h3>
+                <div class="procedure" id="vertexProcedure"></div>
+                <div class="procedure" id="rootsProcedure"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorías</h3>
+
+                <nav class="footer-menu">
+                    <a href="#">Mecánica</a>
+                    <a href="#">Termodinámica</a>
+                    <a href="#">Óptica</a>
+                    <a href="#">Electromagnetismo</a>
+                    <a href="#">Física Moderna</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Sobre Nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Confianza y Seguridad</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados, Armando de León 2025</p>
+    </footer>
+
+    <script src="js/calculadora.js"></script>
+
+</body>
+</html>
