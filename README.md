@@ -1,0 +1,1 @@
+# Funcion_cuadratica
